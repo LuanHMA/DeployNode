@@ -1,0 +1,21 @@
+{{#each errors}}
+    <h1>
+        {{text}}
+    </h1>
+
+    {{else}}
+{{/each}}
+
+<h1>Adicione uma nova categoria</h1>
+
+<hr>
+
+<form action="/admin/categorias/criar" method="post" style="display: flex; flex-direction: column; width: 80%; margin: auto;">
+    <label for="name">Nome:</label>
+    <input type="text" name="name" placeholder="Digite seu nome">
+
+    <label for="slug">Slug:</label>
+    <input type="text" name="slug" placeholder="Slug da categoria">
+
+    <button type="submit">Adicionar</button>
+</form>

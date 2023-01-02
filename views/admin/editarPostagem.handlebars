@@ -1,0 +1,18 @@
+<h1>Editar Postagem</h1>
+
+<form action="/admin/postagens/editar" method="post">
+    <input type="text" placeholder="Titulo" name="title">
+    <input type="text" placeholder="Slug" name="slug">
+    <input type="text" placeholder="Descrição" name="description">
+    <input type="text" placeholder="Conteudo" name="content">
+
+    <select name="categorys">
+        {{#each categorys}}
+            <option value="{{_id}}">{{name}}</option>
+            {{else}}
+            <option value="0">Nenhuma categoria registrada</option>
+        {{/each}}
+    </select>
+
+    <button type="submit">Editar postagem</button>
+</form>

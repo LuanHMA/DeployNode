@@ -1,0 +1,22 @@
+<h1>Lista de Postagens</h1>
+<hr>
+
+{{#each posts}}
+    <div>
+        <h3>Titulo: {{title}}</h3>
+        <p>conteudo:{{content}}</p>
+        <p>Slug: {{slug}}</p>
+        <p>Descrição: {{description}}</p>
+        <p>Categoria: {{category.name}}</p>
+    </div>
+    <a href="/admin/postagens/edit/{{_id}}">
+        <button>Editar postagem</button>
+    </a>
+    <hr>
+    {{else}}
+{{/each}}
+
+
+<a href="/admin/postagens/criar">
+    <button>Nova Postagem</button>
+</a>

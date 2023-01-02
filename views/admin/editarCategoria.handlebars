@@ -1,0 +1,22 @@
+{{#each errors}}
+    <h1>
+        {{text}}
+    </h1>
+
+    {{else}}
+{{/each}}
+
+<h1>Edite uma categoria</h1>
+
+<hr>
+
+<form action="/admin/categorias/editar" method="post" style="display: flex; flex-direction: column; width: 80%; margin: auto;">
+    <input type="hidden" name="id" value="{{category._id}}">
+    <label for="name">Nome:</label>
+    <input type="text" name="name" placeholder="Digite seu nome" value="{{category.name}}">
+
+    <label for="slug">Slug:</label>
+    <input type="text" name="slug" placeholder="Slug da categoria" value="{{category.slug}}">
+
+    <button type="submit">Editar</button>
+</form>
