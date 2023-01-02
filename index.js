@@ -7,12 +7,14 @@ import session from "express-session";
 import flash from "connect-flash";
 import "./database/db.js";
 import { userRouter } from "./routes/user.js";
+import cors from 'cors'
 
 //Global Variables
     const app = Express();
     const port = process.env.PORT || 3000;
 
 //Configs
+    app.use(cors())
     //Session
     app.use(session({
         secret: "cursodenode",
